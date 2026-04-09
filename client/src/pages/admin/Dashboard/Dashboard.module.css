@@ -1,0 +1,137 @@
+.title {
+  margin: 0 0 24px;
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+}
+
+.loading {
+  color: var(--color-text-muted);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 640px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-border);
+  padding: 22px;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(42, 107, 94, 0.2);
+}
+
+.cardIcon {
+  width: 28px;
+  height: 28px;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.cardValue {
+  margin: 0 0 4px;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.cardLabel {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.tableWrap {
+  background: var(--color-white);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-border);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.subtitle {
+  margin: 0 0 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.tableScroll {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table th {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  font-weight: 700;
+}
+
+.table tbody tr:hover {
+  background: var(--color-surface);
+}
+
+.empty {
+  text-align: center;
+  color: var(--color-text-muted);
+  padding: 28px !important;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.badgeAmber {
+  background: rgba(245, 158, 11, 0.15);
+  color: #b45309;
+}
+
+.badgeTeal {
+  background: rgba(42, 107, 94, 0.12);
+  color: var(--color-primary);
+}
+
+.badgeRed {
+  background: rgba(239, 68, 68, 0.12);
+  color: #b91c1c;
+}
