@@ -1,0 +1,42 @@
+.section {
+  padding: 88px 24px;
+  background:
+    linear-gradient(rgba(242, 240, 235, 0.97), rgba(242, 240, 235, 0.97)),
+    url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1600&q=60') center / cover no-repeat;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto 48px;
+}
+
+.h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin: 0 0 12px;
+}
+
+.sub {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 720px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
