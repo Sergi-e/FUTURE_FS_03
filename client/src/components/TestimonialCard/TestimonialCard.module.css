@@ -1,0 +1,80 @@
+.card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+  height: 100%;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+.quote {
+  margin: 0 0 16px;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.star {
+  color: var(--color-primary);
+  width: 16px;
+  height: 16px;
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.avatarShell {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 12px;
+  vertical-align: middle;
+  flex-shrink: 0;
+  position: relative;
+  background-color: var(--color-teal-light);
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  display: block;
+  background-color: var(--color-teal-light);
+}
+
+.avatarFallback {
+  display: none;
+  position: absolute;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  background: var(--color-teal-light);
+}
+
+.name {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  vertical-align: middle;
+}
