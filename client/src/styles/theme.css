@@ -1,0 +1,19 @@
+:root {
+  --color-bg: #fafaf8;
+  --color-surface: #f2f0eb;
+  --color-primary: #2a6b5e;
+  --color-secondary: #e8a87c;
+  --color-text: #1a1a1a;
+  --color-text-muted: #5c5c5c;
+  --color-text-soft: #9a9a9a;
+  --color-border: #e5e3de;
+  --color-teal-light: #d4ede8;
+  --color-white: #ffffff;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --radius-card: 16px;
+  --radius-btn: 24px;
+  --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 8px 32px rgba(42, 107, 94, 0.12);
+  --transition: all 0.25s ease;
+}
