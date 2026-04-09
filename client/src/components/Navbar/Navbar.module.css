@@ -1,0 +1,243 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  padding: 0 24px;
+  transition: var(--transition);
+  background: transparent;
+}
+
+.solid {
+  background: var(--color-white);
+  box-shadow: var(--shadow-card);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.logo:hover {
+  opacity: 0.85;
+}
+
+.logoCross {
+  color: var(--color-primary);
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.logoNovita {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-primary);
+}
+
+.logoHealth {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 20px;
+  color: #5c5c5c;
+}
+
+.nav {
+  display: none;
+  align-items: center;
+  gap: 28px;
+}
+
+@media (min-width: 960px) {
+  .nav {
+    display: flex;
+  }
+}
+
+.link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  transition: var(--transition);
+}
+
+.solid .link {
+  color: var(--color-text-muted);
+}
+
+.link:hover {
+  color: var(--color-primary);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cta {
+  display: none;
+  padding: 10px 22px;
+  border-radius: var(--radius-btn);
+  border: none;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 20px rgba(42, 107, 94, 0.2);
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+@media (min-width: 960px) {
+  .cta {
+    display: inline-flex;
+  }
+}
+
+.burger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(42, 107, 94, 0.08);
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+
+.solid .burger {
+  background: var(--color-teal-light);
+}
+
+.burger:hover {
+  background: var(--color-teal-light);
+}
+
+@media (min-width: 960px) {
+  .burger {
+    display: none;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 950;
+  border: none;
+  background: rgba(26, 26, 26, 0.35);
+  cursor: pointer;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(100%, 360px);
+  z-index: 960;
+  background: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  box-shadow: -8px 0 40px rgba(42, 107, 94, 0.12);
+}
+
+.drawerHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.drawerLogo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.drawerClose {
+  border: none;
+  background: var(--color-surface);
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  transition: var(--transition);
+}
+
+.drawerClose:hover {
+  background: var(--color-teal-light);
+  color: var(--color-primary);
+}
+
+.drawerNav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.drawerLink {
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: var(--color-text);
+  transition: var(--transition);
+}
+
+.drawerLink:hover {
+  background: var(--color-surface);
+  color: var(--color-primary);
+}
+
+.drawerAdmin {
+  margin-top: 16px;
+  padding: 14px 16px;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  transition: var(--transition);
+}
+
+.drawerAdmin:hover {
+  color: var(--color-primary);
+}
+
+.drawerCta {
+  margin-top: auto;
+  padding: 14px;
+  border: none;
+  border-radius: var(--radius-btn);
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.drawerCta:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
