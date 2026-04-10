@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: var(--color-primary);
+  background: #2a6b5e;
   z-index: 10000;
   pointer-events: none;
 }
