@@ -1,6 +1,12 @@
 .section {
-  padding: 88px 24px;
+  padding: 100px 24px;
   background: var(--color-bg);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 24px;
+  }
 }
 
 .inner {
