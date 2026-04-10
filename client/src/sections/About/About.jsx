@@ -47,6 +47,16 @@ export default function About() {
               </div>
             ))}
           </motion.div>
+          <motion.a
+            className={styles.teamBtn}
+            href="#team"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.45, delay: 0.15 }}
+          >
+            Meet Our Team
+          </motion.a>
         </div>
         <motion.div
           className={styles.visual}
