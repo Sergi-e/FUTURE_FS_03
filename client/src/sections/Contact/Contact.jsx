@@ -67,7 +67,6 @@ export default function Contact() {
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
-            <ContactQuickForm />
           </motion.div>
           <motion.div
             className={styles.formCard}
@@ -80,6 +79,9 @@ export default function Contact() {
             <p className={styles.formHint}>All fields are required. We never share your details.</p>
             <AppointmentForm idPrefix="contact" />
           </motion.div>
+        </div>
+        <div className={styles.quickNoteArea}>
+          <ContactQuickForm />
         </div>
       </div>
     </section>
