@@ -1,8 +1,9 @@
 .card {
   background: var(--color-white);
   border: 1px solid var(--color-border);
+  border-top: 4px solid #2a6b5e;
   border-radius: var(--radius-card);
-  padding: 28px;
+  padding: 32px;
   box-shadow: var(--shadow-card);
   transition: var(--transition);
   height: 100%;
@@ -13,10 +14,21 @@
 }
 
 .quote {
+  position: relative;
   margin: 0 0 16px;
   font-size: 1rem;
   line-height: 1.65;
   color: var(--color-text-muted);
+}
+
+.quote::before {
+  content: '"';
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 64px;
+  line-height: 0;
+  color: #d4ede8;
+  margin-bottom: 16px;
 }
 
 .stars {
@@ -48,12 +60,14 @@
   flex-shrink: 0;
   position: relative;
   background-color: var(--color-teal-light);
+  border: 2px solid #d4ede8;
 }
 
 .avatar {
   width: 48px;
   height: 48px;
   object-fit: cover;
+  object-position: top center;
   display: block;
   background-color: var(--color-teal-light);
 }
