@@ -4,7 +4,7 @@ import ContactQuickForm from '../../components/ContactQuickForm/ContactQuickForm
 import styles from './Contact.module.css';
 
 const RECEPTION_IMG =
-  'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&q=80';
+  'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80';
 
 export default function Contact() {
   return (
@@ -62,7 +62,7 @@ export default function Contact() {
               <iframe
                 title="Novita Health location"
                 className={styles.map}
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255281.19801902705!2d29.71998895!3d-1.9400723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca4258ed8f5a1%3A0x1c0c6e7c5b5b5b5b!2sKigali%2C%20Rwanda!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+                src="https://maps.google.com/maps?q=Kigali,Rwanda&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
