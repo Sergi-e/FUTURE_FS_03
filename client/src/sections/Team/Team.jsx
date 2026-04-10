@@ -2,6 +2,9 @@ import { motion } from 'framer-motion';
 import DoctorCard from '../../components/DoctorCard/DoctorCard';
 import styles from './Team.module.css';
 
+const NEUTRAL_PORTRAIT =
+  'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=300&q=80';
+
 const TEAM_PORTRAITS = [
   'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&q=80',
   'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=300&q=80',
@@ -15,6 +18,14 @@ const fallback = [
   { _id: '3', name: 'Dr. James Osei', specialty: 'Nutrition' },
   { _id: '4', name: 'Dr. Priya Sharma', specialty: 'Physiotherapy' },
 ];
+
+function portraitForDoctor(doctor, index) {
+  const name = doctor?.name || '';
+  if (/Jean-Claude|Nkurunziza/i.test(name)) {
+    return NEUTRAL_PORTRAIT;
+  }
+  return TEAM_PORTRAITS[index % TEAM_PORTRAITS.length];
+}
 
 export default function Team({ doctors }) {
   const list = doctors?.length ? doctors.slice(0, 4) : fallback;
@@ -38,7 +49,7 @@ export default function Team({ doctors }) {
               key={d._id || d.name}
               name={d.name}
               specialty={d.specialty}
-              imageUrl={TEAM_PORTRAITS[i]}
+              imageUrl={portraitForDoctor(d, i)}
               index={i}
             />
           ))}
