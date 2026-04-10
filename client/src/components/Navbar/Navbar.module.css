@@ -69,18 +69,34 @@
 }
 
 .link {
+  position: relative;
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--color-text-muted);
-  transition: var(--transition);
+  transition: color 0.2s ease;
 }
 
 .solid .link {
   color: var(--color-text-muted);
 }
 
+.link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #2a6b5e;
+  transition: width 0.3s ease;
+}
+
 .link:hover {
   color: var(--color-primary);
+}
+
+.link:hover::after {
+  width: 100%;
 }
 
 .actions {
@@ -98,13 +114,14 @@
   color: var(--color-white);
   font-weight: 600;
   font-size: 0.875rem;
-  transition: var(--transition);
+  transition: all 0.2s ease;
   box-shadow: 0 4px 20px rgba(42, 107, 94, 0.2);
 }
 
 .cta:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-card-hover);
+  background: #1e5046;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(42, 107, 94, 0.25);
 }
 
 @media (min-width: 960px) {
@@ -202,11 +219,23 @@
 }
 
 .drawerLink {
+  position: relative;
   padding: 14px 16px;
   border-radius: 12px;
   font-weight: 600;
   color: var(--color-text);
-  transition: var(--transition);
+  transition: color 0.2s ease;
+}
+
+.drawerLink::after {
+  content: '';
+  position: absolute;
+  left: 16px;
+  bottom: 10px;
+  width: 0;
+  height: 2px;
+  background: #2a6b5e;
+  transition: width 0.3s ease;
 }
 
 .drawerLink:hover {
@@ -214,12 +243,16 @@
   color: var(--color-primary);
 }
 
+.drawerLink:hover::after {
+  width: calc(100% - 32px);
+}
+
 .drawerAdmin {
   margin-top: 16px;
   padding: 14px 16px;
   font-size: 0.875rem;
   color: var(--color-text-muted);
-  transition: var(--transition);
+  transition: color 0.2s ease;
 }
 
 .drawerAdmin:hover {
@@ -234,10 +267,11 @@
   background: var(--color-primary);
   color: var(--color-white);
   font-weight: 600;
-  transition: var(--transition);
+  transition: all 0.2s ease;
 }
 
 .drawerCta:hover {
-  box-shadow: var(--shadow-card-hover);
-  transform: translateY(-2px);
+  background: #1e5046;
+  box-shadow: 0 4px 16px rgba(42, 107, 94, 0.25);
+  transform: translateY(-1px);
 }
