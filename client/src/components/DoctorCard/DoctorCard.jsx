@@ -21,7 +21,6 @@ export default function DoctorCard({ name, specialty, imageUrl, index = 0 }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.06, duration: 0.4 }}
-      whileHover={{ y: -6 }}
     >
       <div className={styles.avatarWrap}>
         {imageUrl ? (
