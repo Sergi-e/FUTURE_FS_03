@@ -2,11 +2,13 @@
 
 Modern marketing site and protected admin dashboard for **Novita Health**, a private clinic in Kigali (general medicine, mental health, nutrition, physiotherapy). **React + Vite** frontend, **Node.js + Express + MongoDB** backend, JWT admin auth, booking and contact APIs, and optional email notifications via Nodemailer.
 
-**Live demo:** _Deploy the client and server (e.g. Vercel + Railway/Render + MongoDB Atlas), then paste your public URL here._
+## Live demo
+
+This submission is set up to **run locally** (see [Getting started](#getting-started)). There is no bundled public deployment URL. If you later host the client and API (for example Vercel or Netlify for the frontend and Railway or Render for the backend, with MongoDB Atlas), replace this paragraph with your production link.
 
 ## Screenshots
 
-Save captures as `home.png`, `booking.png`, and `admin.png` in [`docs/screenshots/`](docs/screenshots/) (see [`docs/screenshots/README.txt`](docs/screenshots/README.txt)).
+Captured from a local run after seeding the database:
 
 | Homepage | Booking form | Admin dashboard |
 |----------|--------------|-----------------|
@@ -29,7 +31,7 @@ Save captures as `home.png`, `booking.png`, and `admin.png` in [`docs/screenshot
 ### Prerequisites
 
 - Node.js (LTS recommended)
-- MongoDB running locally or a connection string (e.g. Atlas)
+- MongoDB running locally or a connection string (e.g. MongoDB Atlas)
 
 ### Install dependencies
 
@@ -40,11 +42,12 @@ cd ../server && npm install
 
 ### Environment
 
-Copy `server/.env.example` to `server/.env` (or edit the existing `server/.env`) and set:
+Copy `server/.env.example` to `server/.env` and set at least:
 
 - `MONGODB_URI`
 - `JWT_SECRET` (use a long random string in production)
-- `EMAIL_*` and `ADMIN_EMAIL` if you want booking emails (optional; the API still saves appointments if mail is not configured)
+
+Optional: `EMAIL_*` and `ADMIN_EMAIL` if you want booking notifications via Nodemailer. The API still saves appointments if email is not configured.
 
 ### Seed the database
 
@@ -71,7 +74,7 @@ cd server && npm run dev
 cd client && npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173). API requests to `/api` are proxied to the Express server in development.
+Open [http://localhost:5173](http://localhost:5173). In development, requests to `/api` are proxied to the Express server.
 
 ### Admin login
 
@@ -79,23 +82,24 @@ Open [http://localhost:5173](http://localhost:5173). API requests to `/api` are 
 - **Email:** `admin@novitahealth.com`
 - **Password:** `Admin@2024`
 
-_Change the admin password in production (seed again or update the user in MongoDB)._
+Change the admin password in production (re-seed or update the user in MongoDB).
 
 ## Project layout
 
-- `client/` — React + Vite SPA, public site + `/admin/*` dashboard
+- `client/` — React + Vite SPA, public site and `/admin/*` dashboard
 - `server/` — Express REST API, Mongoose models, JWT middleware, Nodemailer helpers
-- `docs/screenshots/` — optional screenshots for this README
+- `docs/screenshots/` — screenshots referenced above
 
 ## Scripts
 
 | Location | Command | Purpose |
 |----------|---------|---------|
-| `server/` | `npm run dev` | API with `--watch` |
+| `server/` | `npm run dev` | API with Node `--watch` |
 | `server/` | `npm start` | API without watch |
 | `server/` | `npm run seed` | Seed admin, doctors, services |
 | `client/` | `npm run dev` | Vite dev server |
 | `client/` | `npm run build` | Production build to `client/dist` |
+| `client/` | `npm run lint` | ESLint |
 
 ## License
 
