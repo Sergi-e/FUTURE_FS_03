@@ -1,0 +1,33 @@
+.btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 850;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2a6b5e;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.3s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+  box-shadow: 0 4px 16px rgba(42, 107, 94, 0.25);
+}
+
+.btn:hover {
+  background: #1e5046;
+  transform: translateY(-2px);
+}
+
+.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
