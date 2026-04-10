@@ -1,6 +1,12 @@
 .section {
-  padding: 88px 24px;
+  padding: 100px 24px;
   background: var(--color-bg);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 24px;
+  }
 }
 
 .grid {
@@ -35,36 +41,66 @@
 .stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 0;
   margin-top: 36px;
 }
 
 .stat {
-  background: var(--color-surface);
-  border-radius: 14px;
-  padding: 20px;
-  border: 1px solid var(--color-border);
-  transition: var(--transition);
+  padding: 20px 0;
+  border-bottom: 2px solid #e5e3de;
+  background: none;
+  border-radius: 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  transition: none;
 }
 
 .stat:hover {
-  box-shadow: var(--shadow-card-hover);
-  border-color: rgba(42, 107, 94, 0.25);
+  box-shadow: none;
+  border-color: #e5e3de;
 }
 
 .statNum {
   display: block;
   font-family: var(--font-heading);
-  font-size: 1.75rem;
+  font-size: 48px;
   font-weight: 700;
-  color: var(--color-primary);
-  margin-bottom: 4px;
+  color: #2a6b5e;
+  line-height: 1.1;
+  margin-bottom: 6px;
 }
 
 .statLabel {
-  font-size: 0.875rem;
-  color: var(--color-text-muted);
+  display: block;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: #5c5c5c;
   font-weight: 500;
+}
+
+.teamBtn {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 14px 32px;
+  border-radius: 24px;
+  border: 2px solid #2a6b5e;
+  color: #2a6b5e;
+  background: transparent;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: center;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.teamBtn:hover {
+  background: #2a6b5e;
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 .visual {
@@ -78,7 +114,7 @@
 
 .imageShell {
   width: 100%;
-  min-height: 480px;
+  min-height: 420px;
   height: 100%;
   border-radius: 20px;
   overflow: hidden;
@@ -88,7 +124,7 @@
 .aboutImg {
   width: 100%;
   height: 100%;
-  min-height: 480px;
+  min-height: 420px;
   object-fit: cover;
   object-position: top center;
   background-color: var(--color-teal-light);
