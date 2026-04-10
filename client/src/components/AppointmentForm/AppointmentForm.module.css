@@ -51,8 +51,8 @@
 .field select:focus,
 .field textarea:focus {
   outline: none;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(42, 107, 94, 0.15);
+  border-color: #2a6b5e;
+  box-shadow: 0 0 0 3px rgba(42, 107, 94, 0.08);
 }
 
 .field textarea {
@@ -83,13 +83,15 @@
   color: var(--color-white);
   font-weight: 700;
   font-size: 1rem;
-  transition: var(--transition);
+  transition: all 0.25s ease;
   box-shadow: 0 6px 24px rgba(42, 107, 94, 0.22);
 }
 
 .submit:hover:not(:disabled) {
+  background: #1e5046;
   transform: translateY(-2px);
   box-shadow: var(--shadow-card-hover);
+  transition: all 0.25s ease;
 }
 
 .submit:disabled {
