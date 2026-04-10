@@ -1,6 +1,12 @@
 .section {
-  padding: 88px 24px;
+  padding: 100px 24px 80px;
   background: var(--color-surface);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 24px 64px;
+  }
 }
 
 .inner {
@@ -32,7 +38,7 @@
   gap: 24px;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
