@@ -5,16 +5,21 @@
   padding: 28px 20px;
   text-align: center;
   box-shadow: var(--shadow-card);
-  transition: var(--transition);
+  transition: all 0.3s ease;
 }
 
 .card:hover {
-  border-color: var(--color-primary);
-  box-shadow: var(--shadow-card-hover);
+  border: 1px solid #2a6b5e;
+  box-shadow: 0 8px 32px rgba(42, 107, 94, 0.12);
+  transform: translateY(-4px);
 }
 
 .card:hover .avatarImg {
   transform: scale(1.05);
+}
+
+.card:hover .avatarWrap {
+  border-color: #2a6b5e;
 }
 
 .avatarWrap {
@@ -26,6 +31,7 @@
   border: 3px solid #d4ede8;
   position: relative;
   background: var(--color-teal-light);
+  transition: border-color 0.3s ease;
 }
 
 .avatarImg {
