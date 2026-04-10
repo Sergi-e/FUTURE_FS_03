@@ -5,6 +5,9 @@ import styles from './Hero.module.css';
 const HERO_IMG =
   'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=900&q=80';
 
+const viewOnce = { once: true };
+const sectionMotion = { duration: 0.5 };
+
 export default function Hero({ onBookOpen }) {
   const [parallaxY, setParallaxY] = useState(0);
 
@@ -21,34 +24,38 @@ export default function Hero({ onBookOpen }) {
         <div className={styles.copy}>
           <motion.p
             className={styles.eyebrow}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={viewOnce}
+            transition={sectionMotion}
           >
             Kigali&apos;s Trusted Health Partner
           </motion.p>
           <motion.h1
             className={styles.h1}
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.05 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={viewOnce}
+            transition={{ ...sectionMotion, delay: 0.05 }}
           >
             Your Health, In Trusted Hands.
           </motion.h1>
           <motion.p
             className={styles.lead}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.12 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={viewOnce}
+            transition={{ ...sectionMotion, delay: 0.1 }}
           >
             Novita Health brings together general medicine, mental wellness, nutrition, and physiotherapy under one calm,
             private roof — so you feel heard, not rushed.
           </motion.p>
           <motion.div
             className={styles.ctas}
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45, delay: 0.2 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={viewOnce}
+            transition={{ ...sectionMotion, delay: 0.15 }}
           >
             <button type="button" className={styles.btnPrimary} onClick={() => onBookOpen?.()}>
               Book a Visit
@@ -59,13 +66,20 @@ export default function Hero({ onBookOpen }) {
           </motion.div>
           <motion.ul
             className={styles.badges}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.35, duration: 0.5 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={viewOnce}
+            transition={{ ...sectionMotion, delay: 0.2 }}
           >
-            <li>✓ Same-day appointments</li>
-            <li>✓ Certified specialists</li>
-            <li>✓ Private & confidential</li>
+            <li>
+              <span className={styles.badge}>✓ Same-day appointments</span>
+            </li>
+            <li>
+              <span className={styles.badge}>✓ Certified specialists</span>
+            </li>
+            <li>
+              <span className={styles.badge}>✓ Private & confidential</span>
+            </li>
           </motion.ul>
         </div>
 
@@ -83,8 +97,9 @@ export default function Hero({ onBookOpen }) {
             <motion.div
               className={`${styles.stat} ${styles.statTop}`}
               initial={{ opacity: 0, x: -12 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4, duration: 0.45 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={viewOnce}
+              transition={{ duration: 0.45, delay: 0.25 }}
             >
               <span className={styles.statNum}>2,400+</span>
               <span className={styles.statLabel}>Patients</span>
@@ -92,8 +107,9 @@ export default function Hero({ onBookOpen }) {
             <motion.div
               className={`${styles.stat} ${styles.statBottom}`}
               initial={{ opacity: 0, x: 12 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.5, duration: 0.45 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={viewOnce}
+              transition={{ duration: 0.45, delay: 0.32 }}
             >
               <span className={styles.statNum}>4.9★</span>
               <span className={styles.statLabel}>Rating</span>
