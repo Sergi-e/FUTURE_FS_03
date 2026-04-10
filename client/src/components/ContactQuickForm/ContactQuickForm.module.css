@@ -35,7 +35,7 @@
   width: 100%;
   padding: 10px 12px;
   border-radius: 10px;
-  border: 1px solid var(--color-border);
+  border: 1px solid #e5e3de;
   font-size: 0.9rem;
   transition: var(--transition);
 }
@@ -43,7 +43,8 @@
 .field input:focus,
 .field textarea:focus {
   outline: none;
-  border-color: var(--color-primary);
+  border-color: #2a6b5e;
+  box-shadow: 0 0 0 3px rgba(42, 107, 94, 0.08);
 }
 
 .err {
@@ -64,17 +65,17 @@
   padding: 12px 18px;
   border: none;
   border-radius: var(--radius-btn);
-  background: var(--color-secondary);
-  color: var(--color-text);
+  background: #d4845a;
+  color: #1a1a1a;
   font-weight: 700;
   font-size: 0.9rem;
   cursor: pointer;
-  transition: var(--transition);
+  transition: all 0.2s ease;
 }
 
 .btn:hover:not(:disabled) {
-  filter: brightness(1.05);
-  transform: translateY(-1px);
+  background: #c4703a;
+  transform: translateY(-2px);
   box-shadow: var(--shadow-card-hover);
 }
 
