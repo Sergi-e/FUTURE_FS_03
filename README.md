@@ -101,6 +101,12 @@ Change the admin password in production (re-seed or update the user in MongoDB).
 | `client/` | `npm run build` | Production build to `client/dist` |
 | `client/` | `npm run lint` | ESLint |
 
+## Author & acknowledgments
+
+**Author:** Serge Ishimwe
+
+**AI tooling:** This project was built by the author with assistance from [Cursor](https://cursor.com), an AI-assisted coding environment used for suggestions, refactors, debugging, and documentation. The author reviewed, tested, and is responsible for all submitted work.
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
