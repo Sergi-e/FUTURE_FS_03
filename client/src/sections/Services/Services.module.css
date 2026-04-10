@@ -1,8 +1,14 @@
 .section {
-  padding: 88px 24px;
+  padding: 100px 24px;
   background:
     linear-gradient(rgba(242, 240, 235, 0.97), rgba(242, 240, 235, 0.97)),
     url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1600&q=60') center / cover no-repeat;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 24px;
+  }
 }
 
 .inner {
@@ -24,8 +30,8 @@
 
 .sub {
   margin: 0;
-  color: var(--color-text-muted);
-  font-size: 1.05rem;
+  color: #5c5c5c;
+  font-size: 18px;
 }
 
 .grid {
@@ -34,7 +40,7 @@
   gap: 24px;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 28px;
