@@ -2,43 +2,50 @@
   background: var(--color-white);
   border-radius: var(--radius-card);
   border: 1px solid var(--color-border);
-  padding: 32px;
+  border-top: 3px solid transparent;
+  padding: 28px;
   box-shadow: var(--shadow-card);
-  transition: var(--transition);
+  transition:
+    transform 0.25s ease,
+    border-color 0.3s ease,
+    box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
   transform: translateY(-4px);
   border-color: var(--color-primary);
+  border-top-color: #2a6b5e;
   box-shadow: var(--shadow-card-hover);
 }
 
 .card:hover .iconWrap {
-  background: var(--color-teal-light);
+  background: #d4ede8;
 }
 
 .iconWrap {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  background: rgba(42, 107, 94, 0.12);
+  background: #d4ede8;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   transition: var(--transition);
 }
 
 .icon {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   color: var(--color-primary);
 }
 
 .title {
   font-family: var(--font-heading);
   font-size: 1.25rem;
-  margin: 0 0 12px;
+  margin: 0 0 10px;
   color: var(--color-text);
 }
 
