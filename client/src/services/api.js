@@ -62,4 +62,7 @@ export const servicesApi = {
 
 export const authApi = {
   login: (email, password) => api.post('/auth/login', { email, password }),
+  me: () => api.get('/auth/me'),
+  updateProfile: (data) => api.patch('/auth/profile', data),
+  changePassword: (data) => api.patch('/auth/password', data),
 };
