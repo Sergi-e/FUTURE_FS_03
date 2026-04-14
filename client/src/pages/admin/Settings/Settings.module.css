@@ -28,6 +28,33 @@
   font-size: 1.15rem;
 }
 
+.sectionSwitch {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.switchBtn {
+  border: 1px solid var(--color-border);
+  background: #fff;
+  color: var(--color-text);
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.switchBtn:hover {
+  border-color: var(--color-primary);
+}
+
+.switchBtnActive {
+  background: rgba(42, 107, 94, 0.09);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
 .form {
   display: grid;
   gap: 12px;
