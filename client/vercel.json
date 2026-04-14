@@ -3,6 +3,10 @@
     {
       "source": "/api/(.*)",
       "destination": "https://future-fs-03-g177.onrender.com/api/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
