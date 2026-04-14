@@ -4,7 +4,11 @@ Modern marketing site and protected admin dashboard for **Novita Health**, a pri
 
 ## Live demo
 
-This submission is set up to **run locally** (see [Getting started](#getting-started)). There is no bundled public deployment URL. If you later host the client and API (for example Vercel or Netlify for the frontend and Railway or Render for the backend, with MongoDB Atlas), replace this paragraph with your production link.
+- **Public site (Vercel):** [https://novita-health.vercel.app/](https://novita-health.vercel.app/)
+- **Admin dashboard:** [https://novita-health.vercel.app/admin/login](https://novita-health.vercel.app/admin/login)
+- **REST API (Render):** [https://future-fs-03-g177.onrender.com/](https://future-fs-03-g177.onrender.com/)
+
+The Vite app proxies `/api/*` to the Render service in production (see `client/vercel.json`). You can still run everything locally using [Getting started](#getting-started).
 
 ## Screenshots
 
