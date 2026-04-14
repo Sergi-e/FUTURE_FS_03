@@ -7,6 +7,7 @@ import {
   MdPeople,
   MdMedicalServices,
   MdMail,
+  MdSettings,
   MdLogout,
   MdMenu,
   MdClose,
@@ -20,6 +21,7 @@ const nav = [
   { to: '/admin/doctors', label: 'Doctors', icon: MdPeople },
   { to: '/admin/services', label: 'Services', icon: MdMedicalServices },
   { to: '/admin/messages', label: 'Messages', icon: MdMail },
+  { to: '/admin/settings', label: 'Settings', icon: MdSettings },
 ];
 
 export default function AdminLayout() {
