@@ -36,15 +36,22 @@ export function AuthProvider({ children }) {
     setAdminState(null);
   }, []);
 
+  const updateAdmin = useCallback((adminPayload) => {
+    if (!adminPayload) return;
+    setAdminState(adminPayload);
+    localStorage.setItem(ADMIN_KEY, JSON.stringify(adminPayload));
+  }, []);
+
   const value = useMemo(
     () => ({
       token,
       admin,
       isAuthenticated: Boolean(token),
       setAuth,
+      updateAdmin,
       logout,
     }),
-    [token, admin, setAuth, logout]
+    [token, admin, setAuth, updateAdmin, logout]
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
