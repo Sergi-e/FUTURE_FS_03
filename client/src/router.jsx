@@ -9,6 +9,7 @@ import Appointments from './pages/admin/Appointments/Appointments';
 import Doctors from './pages/admin/Doctors/Doctors';
 import Services from './pages/admin/Services/Services';
 import Messages from './pages/admin/Messages/Messages';
+import Settings from './pages/admin/Settings/Settings';
 
 export const router = createBrowserRouter([
   {
@@ -31,6 +32,7 @@ export const router = createBrowserRouter([
       { path: 'doctors', element: <Doctors /> },
       { path: 'services', element: <Services /> },
       { path: 'messages', element: <Messages /> },
+      { path: 'settings', element: <Settings /> },
     ],
   },
 ]);
